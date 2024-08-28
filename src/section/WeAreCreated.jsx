@@ -108,11 +108,12 @@ const CreativeSchoolSection = () => {
       </div>
 
       <div className="container mx-auto text-center px-4 md:px-8">
+        <h2 className="text-6xl md:text-7xl  font-bold mb-6">WE CREATED</h2>
         <h2 className="text-6xl md:text-7xl  font-bold mb-6">
-          WE CREATED
-        </h2>
-        <h2 className="text-6xl md:text-7xl  font-bold mb-6">
-          A <span className="text-[#060273] text-6xl font-bold  md:text-7xl">SCHOOL.</span>
+          A{" "}
+          <span className="text-[#060273] text-6xl font-bold  md:text-7xl">
+            SCHOOL.
+          </span>
         </h2>
 
         <div className="flex flex-col items-center md:flex-row md:items-start justify-center gap-6 md:gap-12 creative-school-section-content">
@@ -120,7 +121,7 @@ const CreativeSchoolSection = () => {
             src="path/to/your/image1.jpg"
             alt="Description of Image 1"
             className="w-full md:w-1/2 lg:w-1/3 object-cover rounded-lg"
-            style={{ maxHeight: "400px" }} 
+            style={{ maxHeight: "400px" }}
           />
           <div className="flex flex-col items-center text-base md:text-lg lg:text-xl">
             <p className="mb-4 italic text-center md:text-left">
@@ -144,7 +145,7 @@ const CreativeSchoolSection = () => {
             src="path/to/your/image2.jpg"
             alt="Description of Image 2"
             className="w-full md:w-1/2 lg:w-1/3 object-cover rounded-lg"
-            style={{ maxHeight: "400px" }} 
+            style={{ maxHeight: "400px" }}
           />
         </div>
       </div>

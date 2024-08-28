@@ -210,7 +210,7 @@ const CourseCardSection = () => {
       </div>
 
       {/* Modal for download confirmation */}
-      {isModalOpen && (
+      {/* {isModalOpen && (
         <div className="modal fixed inset-0 flex items-center justify-center z-50">
           <div className="modal-overlay absolute inset-0 bg-black opacity-50"></div>
           <div className="modal-container bg-white rounded-lg shadow-lg p-8 z-10">
@@ -313,7 +313,113 @@ const CourseCardSection = () => {
             </form>
           </div>
         </div>
-      )}
+      )} */}
+      {/* Modal for download confirmation */}
+{isModalOpen && (
+  <div className="modal fixed inset-0 flex items-center justify-center z-50">
+    <div className="modal-overlay absolute inset-0 bg-black opacity-50"></div>
+    <div className="modal-container bg-white rounded-lg shadow-lg p-8 z-10">
+      <h3 className="text-3xl font-bold mb-4 text-[#060273]">
+        Confirm Download
+      </h3>
+      <form onSubmit={handleFormSubmit}>
+        <p className="mb-6 text-gray-600">
+          Please fill out the form to receive the brochure.
+        </p>
+        <div className="mb-4">
+          <label
+            className="block text-sm font-medium text-gray-700"
+            htmlFor="name"
+          >
+            Name
+          </label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            value={formData.name}
+            onChange={handleInputChange}
+            className={`mt-1 block w-full border-b-2 border-[#060273] focus:outline-none focus:border-[#060273] ${
+              formErrors.name ? "border-red-500" : ""
+            }`}
+          />
+          {formErrors.name && (
+            <p className="text-red-500 text-sm">{formErrors.name}</p>
+          )}
+        </div>
+        <div className="mb-4">
+          <label
+            className="block text-sm font-medium text-gray-700"
+            htmlFor="number"
+          >
+            Phone Number
+          </label>
+          <input
+            type="text"
+            id="number"
+            name="number"
+            value={formData.number}
+            onChange={handleInputChange}
+            className={`mt-1 block w-full border-b-2 border-[#060273] focus:outline-none focus:border-[#060273] ${
+              formErrors.number ? "border-red-500" : ""
+            }`}
+          />
+          {formErrors.number && (
+            <p className="text-red-500 text-sm">{formErrors.number}</p>
+          )}
+        </div>
+        <div className="mb-4">
+          <label
+            className="block text-sm font-medium text-gray-700"
+            htmlFor="email"
+          >
+            Email Address
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleInputChange}
+            className="mt-1 block w-full border-b-2 border-[#060273] focus:outline-none focus:border-[#060273]"
+          />
+        </div>
+        <div className="mb-4">
+          <label
+            className="block text-sm font-medium text-gray-700"
+            htmlFor="address"
+          >
+            Address
+          </label>
+          <input
+            type="text"
+            id="address"
+            name="address"
+            value={formData.address}
+            onChange={handleInputChange}
+            className="mt-1 block w-full  border-b-2 border-[#060273] focus:outline-none focus:border-[#060273]"
+          />
+        </div>
+        <div className="flex justify-end">
+          <button
+            type="button"
+            className="bg-gray-500 text-white py-2 px-4 rounded-md mr-4"
+            onClick={() => setIsModalOpen(false)}
+          >
+            Cancel
+          </button>
+          <button
+            type="submit"
+            className="bg-[#060273] text-white py-2 px-4 rounded-md"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+)}
+
     </section>
   );
 };
