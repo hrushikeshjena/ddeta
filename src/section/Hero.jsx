@@ -73,7 +73,7 @@ const HeroSection = () => {
 
         <div className="relative mt-8">
           <FaArrowDown
-            className="arrow-down text-7xl text-white animate-pulse absolute top-0 transform -translate-x-1/2 cursor-pointer"
+            className="arrow-down  text-7xl text-white animate-pulse absolute top-0 transform -translate-x-1/2 cursor-pointer"
             onClick={() => {
               document
                 .getElementById("next-section")
@@ -82,7 +82,7 @@ const HeroSection = () => {
           />
 
           {/* Sub Title */}
-          <div className="flex flex-col content arrow-c items-left">
+          <div className="flex flex-col content-a content arrow-c items-left">
             <h2 className="text-xl md:text-2xl font-semibold mb-1 hero-subtitle">
               School.
             </h2>

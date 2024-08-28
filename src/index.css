@@ -23,6 +23,12 @@
   margin-left: 20px; /* Default margin for small screens */
 }
 
+@media (min-width: 390px) {
+  /* Apply for screens 640px and up (e.g., tablets) */
+  .content-a {
+    margin-left: 90px;
+  }
+}
 @media (min-width: 640px) {
   /* Apply for screens 640px and up (e.g., tablets) */
   .content {
