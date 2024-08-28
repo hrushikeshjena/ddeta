@@ -24,10 +24,17 @@
 }
 
 @media (min-width: 390px) {
-  /* Apply for screens 640px and up (e.g., tablets) */
   .content-a {
     margin-left: 90px;
   }
+  .font-s{
+    font-size: 3.2rem;
+  }
+  .logo-img{
+    margin-top: 30px;
+    margin-bottom: -30px;
+  }
+ 
 }
 @media (min-width: 640px) {
   /* Apply for screens 640px and up (e.g., tablets) */

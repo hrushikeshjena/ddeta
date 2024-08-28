@@ -54,21 +54,21 @@ const HeroSection = () => {
   return (
     <section className="relative h-screen  flex flex-col  md:flex-row items-center bg-[#060273] text-white overflow-hidden">
       {/* Logo */}
-      <div className="flex-none w-full md:w-1/3 content flex items-center justify-center p-8 md:p-16">
+      <div className="flex-none w-full md:w-1/3 content flex items-center logo-img justify-center p-8 md:p-16">
         <img src={logo} ref={logoRef} alt="Logo" className="logo" />
       </div>
 
       {/* Content Area */}
       <div className="flex-1 flex content flex-col items-left justify-center p-6 md:p-12 text-left">
-        <h1 className="text-6xl md:text-7xl font-bold mb-2 hero-title">MAKE</h1>
-        <h1 className="text-6xl md:text-7xl font-bold mb-2 hero-title">
+        <h1 className="text-6xl md:text-7xl font-bold font-s mb-2 hero-title">MAKE</h1>
+        <h1 className="text-6xl md:text-7xl font-s font-bold mb-2 hero-title">
           A CAREER
         </h1>
-        <h1 className="text-6xl md:text-7xl font-bold mb-2 hero-title">
+        <h1 className="text-6xl md:text-7xl font-s font-bold mb-2 hero-title">
           OUTTA
         </h1>
-        <h1 className="text-6xl md:text-7xl font-bold mb-2 hero-title">
-         CREATIVITY
+        <h1 className="text-6xl md:text-7xl font-s font-bold mb-2 hero-title">
+          CREATIVITY
         </h1>
 
         <div className="relative mt-8">
