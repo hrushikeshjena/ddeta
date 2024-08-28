@@ -1,5 +1,3 @@
-
-
 import { useState, useEffect, useRef } from "react";
 import anime from "animejs";
 import Graphics from "../assets/graphics.jpg";
@@ -8,7 +6,7 @@ import Web from "../assets/web-d.jpg";
 import GraphicsDesign from "../assets/graphics-design.pdf";
 import WebDevelopment from "../assets/webdevelopment.pdf";
 import { FaBullhorn, FaPaintBrush, FaLaptopCode } from "react-icons/fa";
-import emailjs from 'emailjs-com';
+import emailjs from "emailjs-com";
 
 const CourseCardSection = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -102,17 +100,21 @@ const CourseCardSection = () => {
     }
 
     // Send form data via email
-    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target, 'YOUR_USER_ID')
-      .then((result) => {
-        console.log(result.text);
-        setIsModalOpen(false);
-        const downloadLink = document.createElement("a");
-        downloadLink.href = selectedBrochure;
-        downloadLink.download = "";
-        downloadLink.click();
-      }, (error) => {
-        console.log(error.text);
-      });
+    emailjs
+      .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", e.target, "YOUR_USER_ID")
+      .then(
+        (result) => {
+          console.log(result.text);
+          setIsModalOpen(false);
+          const downloadLink = document.createElement("a");
+          downloadLink.href = selectedBrochure;
+          downloadLink.download = "";
+          downloadLink.click();
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
   };
 
   return (
@@ -220,7 +222,10 @@ const CourseCardSection = () => {
                 Please fill out the form to receive the brochure.
               </p>
               <div className="mb-4">
-                <label className="block text-sm font-medium text-gray-700" htmlFor="name">
+                <label
+                  className="block text-sm font-medium text-gray-700"
+                  htmlFor="name"
+                >
                   Name
                 </label>
                 <input
@@ -233,10 +238,15 @@ const CourseCardSection = () => {
                     formErrors.name ? "border-red-500" : ""
                   }`}
                 />
-                {formErrors.name && <p className="text-red-500 text-sm">{formErrors.name}</p>}
+                {formErrors.name && (
+                  <p className="text-red-500 text-sm">{formErrors.name}</p>
+                )}
               </div>
               <div className="mb-4">
-                <label className="block text-sm font-medium text-gray-700" htmlFor="number">
+                <label
+                  className="block text-sm font-medium text-gray-700"
+                  htmlFor="number"
+                >
                   Phone Number
                 </label>
                 <input
@@ -249,10 +259,15 @@ const CourseCardSection = () => {
                     formErrors.number ? "border-red-500" : ""
                   }`}
                 />
-                {formErrors.number && <p className="text-red-500 text-sm">{formErrors.number}</p>}
+                {formErrors.number && (
+                  <p className="text-red-500 text-sm">{formErrors.number}</p>
+                )}
               </div>
               <div className="mb-4">
-                <label className="block text-sm font-medium text-gray-700" htmlFor="email">
+                <label
+                  className="block text-sm font-medium text-gray-700"
+                  htmlFor="email"
+                >
                   Email Address
                 </label>
                 <input
@@ -265,7 +280,10 @@ const CourseCardSection = () => {
                 />
               </div>
               <div className="mb-4">
-                <label className="block text-sm font-medium text-gray-700" htmlFor="address">
+                <label
+                  className="block text-sm font-medium text-gray-700"
+                  htmlFor="address"
+                >
                   Address
                 </label>
                 <textarea

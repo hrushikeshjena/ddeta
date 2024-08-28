@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import anime from "animejs";
 import { FaQuoteLeft } from "react-icons/fa";
-import "tailwindcss/tailwind.css";
 
 // Dummy image imports (replace with actual paths)
 // import img1 from '../assets/testimonial1.jpg';
@@ -55,7 +54,7 @@ const TestimonialsSection = () => {
         translateY: [50, 0],
         duration: 1000,
         easing: "easeOutQuad",
-        delay: anime.stagger(200, { start: 500 }),
+        delay: anime.stagger(100, { start: 100 }),
       });
     };
 
@@ -66,13 +65,15 @@ const TestimonialsSection = () => {
   }, []);
 
   return (
-    <section className="bg-gray-100 py-12 founder-section ">
+    <section className="bg-gray-100 py-12">
       <div className="container mx-auto px-4">
         <h2 className="text-7xl font-bold text-center mb-4">
-          THE <span className="text-[#060273]">HYPE</span>{" "}
+          THE <span className="text-[#060273]">HYPE</span>
         </h2>
 
-        <h2 className="text-2xl font-bold text-center mb-12">Some words from alumni of the Academy</h2>
+        <h2 className="text-2xl font-bold text-center mb-12">
+          Some words from alumni of the Academy
+        </h2>
         <div className="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <div

@@ -1,18 +1,27 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import anime from "animejs";
+import emailjs from "emailjs-com";
 import {
   FaFacebookF,
   FaTwitter,
   FaLinkedinIn,
   FaInstagram,
-  FaTimes,
+  FaTimes, // Cross icon
 } from "react-icons/fa";
 
 const ContactPage = () => {
   const navigate = useNavigate();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+  const [status, setStatus] = useState(""); // To hold status messages
 
   useEffect(() => {
+    // Anime.js animations
     anime({
       targets: ".application-message",
       opacity: [0, 1],
@@ -48,8 +57,38 @@ const ContactPage = () => {
     });
   }, []);
 
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    emailjs
+      .send(
+        "YOUR_SERVICE_ID", // Replace with your service ID
+        "YOUR_TEMPLATE_ID", // Replace with your template ID
+        formData,
+        "YOUR_USER_ID" // Replace with your user ID
+      )
+      .then(
+        (response) => {
+          setStatus("Message sent successfully!");
+          setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            message: "",
+          });
+        },
+        (error) => {
+          setStatus("Failed to send message. Please try again.");
+        }
+      );
+  };
+
   return (
-    <section className="bg-gray-100 py-16 relative">
+    <section className="bg-gray-100 py-16 relative founder-section">
       <div className="absolute top-4 right-4 cross-icon">
         <FaTimes
           className="text-gray-800 text-3xl cursor-pointer hover:text-blue-600 transition duration-300"
@@ -67,7 +106,7 @@ const ContactPage = () => {
             Partners! Our goal is to provide a transformative experience that
             fosters creativity and innovation.
           </p>
-          <p className="text-base sm:text-lg mb-8 text-gray-700">
+          <p className="text-base sm:text-lg mb-12 text-gray-700">
             Applications are now closed for the 2024-25 cohort. Stay tuned for
             future opportunities as applications for the Year 4 program will
             open in January 2025.
@@ -83,7 +122,7 @@ const ContactPage = () => {
               <h3 className="text-xl sm:text-2xl font-bold mb-4 text-blue-800">
                 Contact Us
               </h3>
-              <form>
+              <form onSubmit={handleSubmit}>
                 <div className="mb-4">
                   <label
                     htmlFor="name"
@@ -94,6 +133,9 @@ const ContactPage = () => {
                   <input
                     type="text"
                     id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
                     className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
                 </div>
@@ -107,6 +149,9 @@ const ContactPage = () => {
                   <input
                     type="email"
                     id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
                     className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
                 </div>
@@ -120,6 +165,9 @@ const ContactPage = () => {
                   <input
                     type="text"
                     id="phone"
+                    name="phone"
+                    value={formData.phone}
+                    onChange={handleChange}
                     className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
                 </div>
@@ -132,7 +180,10 @@ const ContactPage = () => {
                   </label>
                   <textarea
                     id="message"
+                    name="message"
                     rows="4"
+                    value={formData.message}
+                    onChange={handleChange}
                     className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
                   ></textarea>
                 </div>
@@ -142,12 +193,17 @@ const ContactPage = () => {
                 >
                   Submit
                 </button>
+                {status && (
+                  <p className="mt-4 text-base sm:text-lg text-gray-700">
+                    {status}
+                  </p>
+                )}
               </form>
             </div>
           </div>
 
           {/* Address Section */}
-          <div className="lg:w-1/2">
+          <div className="lg:w-1/3">
             <div className="address-section bg-white shadow-lg rounded-lg p-6 sm:p-8">
               <h3 className="text-xl sm:text-2xl font-bold mb-4 text-blue-800">
                 Address
@@ -189,43 +245,25 @@ const ContactPage = () => {
                   </a>
                   <a
                     href="#"
-                    className="text-blue-500 hover:text-blue-700 transition duration-300"
+                    className="text-blue-400 hover:text-blue-600 transition duration-300"
                   >
                     <FaTwitter className="text-lg sm:text-xl" />
                   </a>
                   <a
                     href="#"
-                    className="text-blue-500 hover:text-blue-700 transition duration-300"
+                    className="text-blue-600 hover:text-blue-800 transition duration-300"
                   >
                     <FaLinkedinIn className="text-lg sm:text-xl" />
                   </a>
                   <a
                     href="#"
-                    className="text-blue-500 hover:text-blue-700 transition duration-300"
+                    className="text-pink-500 hover:text-pink-700 transition duration-300"
                   >
                     <FaInstagram className="text-lg sm:text-xl" />
                   </a>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <div className="w-full px-4 mt-8">
-        {/* Map Section */}
-        <div className="map bg-white shadow-lg rounded-lg p-6 sm:p-8">
-          <h3 className="text-xl sm:text-2xl font-bold mb-4 text-blue-800">
-            Our Location
-          </h3>
-          <div className="relative w-full h-64">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.895093015917!2d-122.39967268468141!3d37.789217879757034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808f6c28210b%3A0x1e78b8cfd7d2c1d7!2s123%20Creative%20Lane%2C%20San%20Francisco%2C%20CA%2094105!5e0!3m2!1sen!2sus!4v1629180784941!5m2!1sen!2sus"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen=""
-              loading="lazy"
-            ></iframe>
           </div>
         </div>
       </div>

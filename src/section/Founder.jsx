@@ -45,7 +45,7 @@ const FounderSection = () => {
             opacity: [0, 1],
             translateX: [100, 0], // Slide in from the right
             duration: 1000,
-            delay: 1500,
+            delay: 1000,
             easing: 'easeOutExpo'
           });
         } else {

@@ -1,25 +1,25 @@
-import React, { useEffect } from 'react';
-import anime from 'animejs';
-import 'tailwindcss/tailwind.css';
-import image from '../assets/graphics.jpg'; // Adjust the path to your image
+import React, { useEffect } from "react";
+import anime from "animejs";
+import "tailwindcss/tailwind.css";
+import image from "../assets/graphics.jpg"; // Adjust the path to your image
 
 const WhoAreWe = () => {
   useEffect(() => {
     const handleScroll = () => {
       anime({
-        targets: '.animate',
+        targets: ".animate",
         opacity: [0, 1],
         translateY: [50, 0],
         duration: 1000,
-        easing: 'easeOutQuad',
-        delay: anime.stagger(200, { start: 500 }),
+        easing: "easeOutExpo",
+        delay: anime.stagger(100, { start: 100 }),
       });
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     handleScroll(); // Trigger animation on initial load
 
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (

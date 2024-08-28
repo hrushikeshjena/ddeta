@@ -15,12 +15,38 @@ const HeroSection = () => {
       duration: 1000,
       easing: "easeOutExpo",
     });
-
+    anime({
+      targets: ".hero-title-whole",
+      opacity: [0, 1],
+      duration: 1000,
+      easing: "easeOutQuad",
+    });
     anime({
       targets: ".hero-title",
       opacity: [0, 1],
       translateY: [-50, 0],
       duration: 1000,
+      easing: "easeOutExpo",
+    });
+    anime({
+      targets: ".hero-title1",
+      opacity: [0, 1],
+      translateY: [-60, 0],
+      duration: 1500,
+      easing: "easeOutExpo",
+    });
+    anime({
+      targets: ".hero-title2",
+      opacity: [0, 1],
+      translateY: [-70, 0],
+      duration: 2000,
+      easing: "easeOutExpo",
+    });
+    anime({
+      targets: ".hero-title3",
+      opacity: [0, 1],
+      translateY: [-80, 0],
+      duration: 2500,
       easing: "easeOutExpo",
     });
 
@@ -59,15 +85,17 @@ const HeroSection = () => {
       </div>
 
       {/* Content Area */}
-      <div className="flex-1 flex content flex-col items-left justify-center p-6 md:p-12 text-left">
-        <h1 className="text-6xl md:text-7xl font-bold font-s mb-2 hero-title">MAKE</h1>
-        <h1 className="text-6xl md:text-7xl font-s font-bold mb-2 hero-title">
+      <div className="flex-1 flex content flex-col hero-title-whole items-left justify-center p-6 md:p-12 text-left">
+        <h1 className="text-6xl md:text-7xl font-bold font-s mb-2 hero-title">
+          MAKE
+        </h1>
+        <h1 className="text-6xl md:text-7xl font-s font-bold mb-2 hero-title1">
           A CAREER
         </h1>
-        <h1 className="text-6xl md:text-7xl font-s font-bold mb-2 hero-title">
+        <h1 className="text-6xl md:text-7xl font-s font-bold mb-2 hero-title2">
           OUTTA
         </h1>
-        <h1 className="text-6xl md:text-7xl font-s font-bold mb-2 hero-title">
+        <h1 className="text-6xl md:text-7xl font-s font-bold mb-2 hero-title3">
           CREATIVITY
         </h1>
 
