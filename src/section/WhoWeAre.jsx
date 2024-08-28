@@ -23,30 +23,31 @@ const WhoAreWe = () => {
   }, []);
 
   return (
-    <section className="bg-[#060273] w-full min-h-screen flex flex-col justify-center items-center py-8 px-4 md:px-8 lg:px-16">
+    <section className="bg-[#060273] blue-section  w-full min-h-screen flex flex-col justify-center items-center py-8 px-4 md:px-8 lg:px-16">
       <div className="text-center mb-12 animate">
-        <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold mb-4 text-white">
+        <h2 className="text-4xl md:text-5xl   font-bold mb-4 text-white">
           WHO ARE WE?
         </h2>
-        <h2 className="text-4xl sm:text-6xl md:text-7xl font-semibold text-white mb-4">
+
+        <h2 className="text-6xl md:text-7xl  font-bold text-white mb-4">
           WE’RE GS&P.
         </h2>
       </div>
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-center gap-8">
         <div className="md:w-1/2 flex flex-col items-center md:items-start mb-8 md:mb-0 animate text-center md:text-left">
-          <p className="text-base sm:text-lg md:text-xl mb-2 text-white">
+          <p className="text-base italic sm:text-lg md:text-xl mb-2 text-white">
             Fast Company’s 2021
           </p>
-          <p className="text-base sm:text-lg md:text-xl mb-2 text-white">
+          <p className="text-base italic sm:text-lg md:text-xl mb-2 text-white">
             “Most Innovative Agency in the World”
           </p>
-          <p className="text-base sm:text-lg md:text-xl mb-2 text-white">
+          <p className="text-base italic sm:text-lg md:text-xl mb-2 text-white">
             Campaign Magazine’s 2020 Agency of the Year
           </p>
           <p className="text-base sm:text-lg md:text-xl mb-2 text-white">
             A-List winner
           </p>
-          <p className="text-base sm:text-lg md:text-xl text-white">
+          <p className="text-base italic sm:text-lg md:text-xl text-white">
             2018, 2019, 2020, 2021, 2022
           </p>
         </div>

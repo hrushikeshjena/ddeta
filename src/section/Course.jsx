@@ -146,7 +146,7 @@ const CourseCardSection = () => {
             <h2 className="text-xl md:text-2xl font-semibold mb-2 text-[#060273]">
               Digital Marketing
             </h2>
-            <p className="text-sm md:text-base text-gray-700">
+            <p className="text-sm italic md:text-base text-gray-700">
               Learn the latest strategies in digital marketing to boost online
               presence and drive sales.
             </p>
@@ -172,7 +172,7 @@ const CourseCardSection = () => {
             <h2 className="text-xl md:text-2xl font-semibold mb-2 text-[#060273]">
               Graphics Designing
             </h2>
-            <p className="text-sm md:text-base text-gray-700">
+            <p className="text-sm italic md:text-base text-gray-700">
               Master the art of visual communication and design stunning
               graphics for various media.
             </p>
@@ -198,7 +198,7 @@ const CourseCardSection = () => {
             <h2 className="text-xl md:text-2xl font-semibold mb-2 text-[#060273]">
               Web Development
             </h2>
-            <p className="text-sm md:text-base text-gray-700">
+            <p className="text-sm italic md:text-base text-gray-700">
               Get hands-on experience with web technologies and build
               responsive, user-friendly websites.
             </p>

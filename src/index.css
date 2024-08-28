@@ -1,13 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Baskervville+SC&display=swap');
 * {
   box-sizing: border-box;
-  font-family: 'Baskervville SC', serif;
   font-weight: 400;
   font-style: normal;
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+}
+.blue-section {
+  background-image: url('./assets/5000x3000.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .founder-section {
   background-image: url('./assets/bg-g.jpg');

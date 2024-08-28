@@ -47,7 +47,7 @@ const LocationSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="bg-[#060273]  w-full min-h-screen text-white py-16 px-4 flex flex-col md:flex-row items-center justify-center"
+      className="bg-[#060273] blue-section   w-full min-h-screen text-white py-16 px-4 flex flex-col md:flex-row items-center justify-center"
     >
       <div className="flex content flex-col md:flex-row gap-8 items-center">
         {/* Map Card */}
@@ -61,7 +61,7 @@ const LocationSection = () => {
 
         {/* Content Area */}
         <div className="content-area flex-1 md:w-1/2 lg:w-2/3 text-center md:text-left p-4 flex flex-col justify-center items-center md:items-start">
-          <h2 className="text-6xl md:text-7xlfont-bold mb-4">K. Where?</h2>
+          <h2 className="text-6xl md:text-7xl font-bold mb-4">K. Where?</h2>
           <p className="text-lg md:text-xl mb-4">Our office, San Francisco.</p>
           <p className="text-lg md:text-xl mb-4">For a year.</p>
           <p className="text-lg md:text-xl font-semibold mb-8">

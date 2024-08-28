@@ -108,11 +108,11 @@ const CreativeSchoolSection = () => {
       </div>
 
       <div className="container mx-auto text-center px-4 md:px-8">
-        <h2 className="text-6xl md:text-7xl sm:text-4xl lg:text-7xl font-bold mb-6">
+        <h2 className="text-6xl md:text-7xl  font-bold mb-6">
           WE CREATED
         </h2>
-        <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
-          A <span className="text-[#060273]">SCHOOL.</span>
+        <h2 className="text-6xl md:text-7xl  font-bold mb-6">
+          A <span className="text-[#060273] text-6xl font-bold  md:text-7xl">SCHOOL.</span>
         </h2>
 
         <div className="flex flex-col items-center md:flex-row md:items-start justify-center gap-6 md:gap-12 creative-school-section-content">
@@ -123,18 +123,18 @@ const CreativeSchoolSection = () => {
             style={{ maxHeight: "400px" }} 
           />
           <div className="flex flex-col items-center text-base md:text-lg lg:text-xl">
-            <p className="mb-4 text-center md:text-left">
+            <p className="mb-4 italic text-center md:text-left">
               So all creatives have an equal chance at becoming professional
               advertising creatives. No matter how you got here.
             </p>
-            <p className="mb-4 text-center md:text-left">
+            <p className="mb-4 italic text-center md:text-left">
               Our editors, designers, filmmakers, sound mixers, and entire
               production staff will be in your pocket, ready for you to use.
             </p>
-            <p className="mb-4 text-center md:text-left">
+            <p className="mb-4 italic text-center md:text-left">
               All you gotta do is show up, be yourself, and commit.
             </p>
-            <p className="mb-4 text-center md:text-left">
+            <p className="mb-4 italic text-center md:text-left">
               And if you make it a year, you’ll have a portfolio, knowledge, and
               experience that will put you among the most sought-after writers,
               designers, and art directors in the ad industry.

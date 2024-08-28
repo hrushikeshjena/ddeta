@@ -68,10 +68,10 @@ const TestimonialsSection = () => {
     <section className="bg-gray-100 py-12">
       <div className="container mx-auto px-4">
         <h2 className="text-6xl md:text-7xl font-bold text-center mb-4">
-          THE <span className="text-[#060273]">HYPE</span>
+          THE <span className="text-[#060273] text-6xl md:text-7xl font-bold">HYPE</span>
         </h2>
 
-        <h2 className="text-2xl font-bold text-center mb-12">
+        <h2 className="text-2xl italic font-bold text-center mb-12">
           Some words from alumni of the Academy
         </h2>
         <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

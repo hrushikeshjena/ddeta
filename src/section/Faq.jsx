@@ -115,7 +115,7 @@ const FAQSection = () => {
   };
 
   return (
-    <div className="bg-[#060273] py-16 px-4">
+    <div className="bg-[#060273] blue-section h-screen py-16 px-4">
       <div className="container mx-auto flex flex-col md:flex-row">
         <div className="flex-1 mb-12 md:mb-0 md:pr-8">
           <h2 className="text-3xl font-bold text-white mb-8">Frequently Asked Questions</h2>

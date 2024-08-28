@@ -78,7 +78,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="relative h-screen  flex flex-col  md:flex-row items-center bg-[#060273] text-white overflow-hidden">
+    <section className="relative h-screen blue-section  flex flex-col  md:flex-row items-center bg-[#060273] text-white overflow-hidden">
       {/* Logo */}
       <div className="flex-none w-full md:w-1/3 content flex items-center logo-img justify-center p-8 md:p-16">
         <img src={logo} ref={logoRef} alt="Logo" className="logo" />
@@ -111,13 +111,13 @@ const HeroSection = () => {
 
           {/* Sub Title */}
           <div className="flex flex-col content-a content arrow-c items-left">
-            <h2 className="text-xl md:text-2xl font-semibold mb-1 hero-subtitle">
+            <h2 className="text-xl italic  md:text-2xl font-semibold mb-1 hero-subtitle">
               School.
             </h2>
-            <h2 className="text-xl md:text-2xl font-semibold mb-1 hero-subtitle">
+            <h2 className="text-xl italic md:text-2xl font-semibold mb-1 hero-subtitle">
               For a year.
             </h2>
-            <h2 className="text-xl md:text-2xl font-semibold mb-1 hero-subtitle">
+            <h2 className="text-xl italic md:text-2xl font-semibold mb-1 hero-subtitle">
               For free.
             </h2>
           </div>
@@ -127,10 +127,10 @@ const HeroSection = () => {
       {/* Contact Button */}
       <button
         onClick={() => navigate("/contact")}
-        className="fixed top-4 right-4 bg-yellow-400 text-black px-4 py-2 rounded flex items-center space-x-2 z-10 hover:bg-yellow-300 transition-colors duration-300 shadow-lg"
+        className="fixed top-4 right-4 bg-white text-[#060273] px-4 py-2 rounded flex items-center space-x-2 z-10 hover:bg-gray-100 transition-colors duration-300 shadow-lg"
       >
         <FaEnvelope className="text-lg md:text-xl" />
-        <span className="hidden md:inline-block bg-yellow-400 text-black py-3 px-6 rounded-lg hover:bg-yellow-300 transition-colors duration-300">
+        <span className="hidden md:inline-block bg-white text-[#060273] py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors duration-300">
           Contact Us
         </span>
       </button>
@@ -139,10 +139,10 @@ const HeroSection = () => {
         href="https://wa.me/1234567890" // Replace with your WhatsApp number or link
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-4 right-4 bg-green-500 text-white px-4 py-2 rounded flex items-center space-x-2 z-10 hover:bg-green-400 transition-colors duration-300 shadow-lg"
+        className="fixed bottom-4 right-4 bg-white text-[#060273] px-4 py-2 rounded flex items-center space-x-2 z-10 hover:bg-gary-100 transition-colors duration-300 shadow-lg"
       >
         <FaWhatsapp className="text-lg md:text-xl" />
-        <span className="hidden md:inline-block bg-green-500 text-white py-3 px-6 rounded-lg hover:bg-green-400 transition-colors duration-300">
+        <span className="hidden md:inline-block bg-white text-[#060273] py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors duration-300">
           Chat with us
         </span>
       </a>

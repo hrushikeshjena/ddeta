@@ -60,7 +60,7 @@ const WelcomeSection = () => {
   return (
     <div
       ref={sectionRef}
-      className="min-h-screen h-screen  bg-[#060273] text-center py-16 px-4 md:px-8 lg:px-16"
+      className="min-h-screen h-screen blue-section   bg-[#060273] text-center py-16 px-4 md:px-8 lg:px-16"
     >
       <div className="welcome-content" ref={contentRef}>
         <h3
@@ -72,22 +72,22 @@ const WelcomeSection = () => {
         <div className="flex flex-col md:flex-row justify-center mb-8 md:mb-12 space-y-8 md:space-y-0 md:space-x-12">
           <div className="flex flex-col items-center icon opacity-0">
             <FaRocket className="text-4xl sm:text-5xl md:text-6xl text-yellow-300 mb-4 transform hover:scale-110 transition-transform duration-300" />
-            <p className="text-lg md:text-xl text-white">Ignite Ideas</p>
+            <p className="text-lg md:text-xl text-white italic">Ignite Ideas</p>
           </div>
           <div className="flex flex-col items-center icon opacity-0">
             <FaMagic className="text-4xl sm:text-5xl md:text-6xl text-purple-300 mb-4 transform hover:scale-110 transition-transform duration-300" />
-            <p className="text-lg md:text-xl text-white">Create Magic</p>
+            <p className="text-lg md:text-xl text-white italic">Create Magic</p>
           </div>
           <div className="flex flex-col items-center icon opacity-0">
             <FaRegHandshake className="text-4xl sm:text-5xl md:text-6xl text-green-300 mb-4 transform hover:scale-110 transition-transform duration-300" />
-            <p className="text-lg md:text-xl text-white">Collaborate</p>
+            <p className="text-lg md:text-xl text-white italic">Collaborate</p>
           </div>
         </div>
         <div>
-          <p className="text-base sm:text-lg md:text-xl xl:text-2xl text-white mb-4 opacity-0">
+          <p className="text-base italic sm:text-lg md:text-xl xl:text-2xl text-white mb-4 opacity-0">
             We’re all about sparking creativity and fostering innovation.
           </p>
-          <p className="text-sm sm:text-base md:text-lg xl:text-xl text-white mt-4 opacity-0">
+          <p className="text-sm italic sm:text-base md:text-lg xl:text-xl text-white mt-4 opacity-0">
             Join us in making a difference and transforming ideas into reality.
           </p>
         </div>
