@@ -81,7 +81,7 @@ const FounderSection = () => {
     <section
       id="next-section"
       ref={sectionRef}
-      className="w-screen h-screen flex items-center justify-center bg-[#060273] text-[#060273] p-8 founder-section"
+      className=" flex items-center h-screen  justify-center bg-[#060273] text-[#060273] p-8 founder-section"
     >
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-center">
         {/* Image Section */}

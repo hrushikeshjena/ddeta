@@ -118,7 +118,7 @@ const CourseCardSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="bg-gray-100 py-16 px-4 w-full h-auto lg:h-screen founder-section"
+      className="bg-gray-100  py-16 px-4 w-full h-auto lg:h-screen founder-section"
     >
       <div className="container mx-auto text-center">
         <h2 className="text-4xl md:text-6xl font-bold mb-12 text-[#060273]">

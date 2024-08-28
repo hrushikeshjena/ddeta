@@ -61,9 +61,11 @@ const TestimonialsSection = () => {
   }, []);
 
   return (
-    <section className="bg-gray-100 py-12 w-screen h-screen">
+    <section className="bg-gray-100 py-12 founder-section ">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">What Our Alumni Say</h2>
+      <h2 className="text-7xl font-bold text-center mb-4">THE <span className="text-[#060273]">HYPE</span> </h2>
+
+        <h2 className="text-2xl font-bold text-center mb-12">Some Wor</h2>
         <div className="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <div

@@ -1,18 +1,52 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-*{
-  box-sizing: border-box;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
+@import url('https://fonts.googleapis.com/css2?family=Baskervville+SC&display=swap');
+* {
+  box-sizing: border-box;
+  font-family: 'Baskervville SC', serif;
+  font-weight: 400;
+  font-style: normal;
 }
 .founder-section {
-    background-image: url('./assets/istockphoto-482864928-612x612.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  background-image: url('./assets/bg-g.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.content {
+  margin-left: 120px;
+}
+
+.content {
+  margin-left: 20px; /* Default margin for small screens */
+}
+
+@media (min-width: 640px) {
+  /* Apply for screens 640px and up (e.g., tablets) */
+  .content {
+    margin-left: 40px;
   }
-  .content{
-    margin-left: 120px;
+}
+
+@media (min-width: 768px) {
+  /* Apply for screens 768px and up (e.g., small laptops) */
+  .content {
+    margin-left: 60px;
   }
-  
+}
+
+@media (min-width: 1024px) {
+  /* Apply for screens 1024px and up (e.g., laptops and desktops) */
+  .content {
+    margin-left: 80px;
+  }
+}
+
+@media (min-width: 1280px) {
+  /* Apply for screens 1280px and up (e.g., large desktops) */
+  .content {
+    margin-left: 120px; /* Full margin for large screens */
+  }
+}

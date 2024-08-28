@@ -1,13 +1,14 @@
+
 import React, { useEffect, useRef } from 'react';
 import anime from 'animejs';
-import Map from '../assets/map.png';
+import Map from '../assets/Map (1).png';
 
 const LocationSection = () => {
   const sectionRef = useRef(null);
 
   useEffect(() => {
     const handleScrollAnimation = (entries) => {
-      entries.forEach(entry => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
           anime({
             targets: '.map-card, .content-area',
@@ -47,23 +48,21 @@ const LocationSection = () => {
   return (
     <section
       ref={sectionRef}
-      className="bg-[#060273] w-full min-h-screen text-white py-16 px-4 flex flex-col md:flex-row items-center justify-center"
+      className="bg-[#060273]  w-full min-h-screen text-white py-16 px-4 flex flex-col md:flex-row items-center justify-center"
     >
-      <div className="flex flex-col md:flex-row w-full max-w-6xl gap-8">
+      <div className="flex content flex-col md:flex-row gap-8 items-center">
         {/* Map Card */}
-        <div className="map-card flex-none md:w-1/2 lg:w-1/3 p-4 flex justify-center">
-          <div className="bg-gray-200 text-black rounded-lg shadow-lg overflow-hidden max-w-xs w-full">
-            <img
-              src={Map} // Replace with actual map image or embed map
-              alt="Map of San Francisco"
-              className="w-full h-auto"
-            />
-          </div>
+        <div className="map-card flex-1">
+          <img
+            src={Map} 
+            alt="Map of San Francisco"
+            className="w-full h-auto object-cover"
+          />
         </div>
 
         {/* Content Area */}
         <div className="content-area flex-1 md:w-1/2 lg:w-2/3 text-center md:text-left p-4 flex flex-col justify-center items-center md:items-start">
-          <h2 className="text-5xl md:text-6xl font-bold mb-4">K. Where?</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">K. Where?</h2>
           <p className="text-lg md:text-xl mb-4">Our office, San Francisco.</p>
           <p className="text-lg md:text-xl mb-4">For a year.</p>
           <p className="text-lg md:text-xl font-semibold mb-8">You up for it?</p>

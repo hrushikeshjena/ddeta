@@ -36,7 +36,7 @@ const FAQSection = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#060273] py-16 px-4">
+    <div className="min-h-screen  bg-[#060273] py-16 px-4">
       <div className="container mx-auto flex flex-col md:flex-row">
         <div className="flex-1 mb-12 md:mb-0 md:pr-8"> {/* Add spacing here */}
           <h2 className="text-3xl font-bold text-white mb-8">Frequently Asked Questions</h2>
@@ -79,7 +79,7 @@ const FAQSection = () => {
             <p className="text-gray-700 mb-6">
               Have more questions or ready to take the next step? Contact us today to learn more about our programs and how we can help you achieve your goals.
             </p>
-            <a href="/contact" className="inline-block bg-blue-500 text-white py-3 px-6 rounded-lg shadow-md hover:bg-blue-600 transition-colors duration-300">
+            <a href="/contact" className="inline-block bg-[#060273] text-white py-3 px-6 rounded-lg shadow-md hover:bg-[#060273]-600 transition-colors duration-300">
               Contact Us
             </a>
           </div>
