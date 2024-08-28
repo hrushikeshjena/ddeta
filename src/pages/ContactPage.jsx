@@ -98,7 +98,7 @@ const ContactPage = () => {
       <div className="w-full flex justify-center px-4">
         {/* Application Message */}
         <div className="max-w-3xl w-full mb-8 lg:mb-0 application-message text-center lg:text-left">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 text-blue-800">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 text-[#060273]">
             Academy 2024 Application
           </h2>
           <p className="text-base sm:text-lg mb-4 text-gray-700">
@@ -119,7 +119,7 @@ const ContactPage = () => {
           {/* Contact Form */}
           <div className="lg:w-1/2 mb-8 lg:mb-0">
             <div className="contact-form bg-white shadow-lg rounded-lg p-6 sm:p-8">
-              <h3 className="text-xl sm:text-2xl font-bold mb-4 text-blue-800">
+              <h3 className="text-xl sm:text-2xl font-bold mb-4 text-[#060273]">
                 Contact Us
               </h3>
               <form onSubmit={handleSubmit}>
@@ -189,7 +189,7 @@ const ContactPage = () => {
                 </div>
                 <button
                   type="submit"
-                  className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition duration-300"
+                  className="bg-[#060273] text-white px-4 py-2 rounded hover:bg-[#060273]-600 transition duration-300"
                 >
                   Submit
                 </button>
@@ -205,7 +205,7 @@ const ContactPage = () => {
           {/* Address Section */}
           <div className="lg:w-1/3">
             <div className="address-section bg-white shadow-lg rounded-lg p-6 sm:p-8">
-              <h3 className="text-xl sm:text-2xl font-bold mb-4 text-blue-800">
+              <h3 className="text-xl sm:text-2xl font-bold mb-4 text-[#060273]">
                 Address
               </h3>
               <p className="text-base sm:text-lg text-gray-700">
@@ -217,13 +217,13 @@ const ContactPage = () => {
                 <br />
                 USA
               </p>
-              <h3 className="text-xl sm:text-2xl font-bold mb-4 text-blue-800">
+              <h3 className="text-xl sm:text-2xl font-bold mb-4 text-[#060273]">
                 Phone Number
               </h3>
               <p className="text-base sm:text-lg text-gray-700">
                 +91 987456123
               </p>
-              <h3 className="text-xl sm:text-2xl font-bold mb-4 text-blue-800">
+              <h3 className="text-xl sm:text-2xl font-bold mb-4 text-[#060273]">
                 Email
               </h3>
               <p className="text-base sm:text-lg text-gray-700">
