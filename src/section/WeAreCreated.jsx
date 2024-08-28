@@ -10,43 +10,80 @@ const CreativeSchoolSection = () => {
       const section = sectionRef.current;
       if (!section) return;
 
+      const logoElement = section.querySelector(".logo");
+      const headers = section.querySelectorAll("h2");
       const content = section.querySelector(".creative-school-section-content");
-      if (!content) return;
+
+      if (!content || !logoElement || headers.length === 0) return;
 
       const contentRect = content.getBoundingClientRect();
+      const sectionRect = section.getBoundingClientRect();
 
-      if (contentRect.top < window.innerHeight && contentRect.bottom > 0) {
+      if (sectionRect.top < window.innerHeight && sectionRect.bottom > 0) {
+        // Animate logo
+        anime({
+          targets: logoElement,
+          opacity: [0, 1],
+          translateY: [-20, 0],
+          duration: 1000,
+          easing: "easeOutCubic",
+        });
+
+        // Animate h2 elements
+        anime({
+          targets: headers,
+          opacity: [0, 1],
+          translateY: [-20, 0],
+          duration: 1000,
+          delay: anime.stagger(200, { start: 300 }),
+          easing: "easeOutCubic",
+        });
+
         // Animate paragraphs and images within the content
         anime({
           targets: ".creative-school-section-content p",
           opacity: [0, 1],
-          translateY: [20, 0],
-          duration: 800,
-          delay: (el, i) => i * 300,
-          easing: "easeOutExpo",
+          translateY: [30, 0],
+          duration: 1000,
+          delay: anime.stagger(200, { start: 600 }),
+          easing: "easeOutCubic",
         });
 
         anime({
           targets: ".creative-school-section-content img",
           opacity: [0, 1],
-          translateY: [20, 0],
-          duration: 800,
-          delay: (el, i) => i * 300,
-          easing: "easeOutExpo",
+          translateY: [30, 0],
+          duration: 1000,
+          delay: anime.stagger(200, { start: 600 }),
+          easing: "easeOutCubic",
         });
       } else {
         // Reset animation when content is out of view
         anime({
+          targets: logoElement,
+          opacity: 0,
+          translateY: -20,
+          duration: 0,
+        });
+
+        anime({
+          targets: headers,
+          opacity: 0,
+          translateY: -20,
+          duration: 0,
+        });
+
+        anime({
           targets: ".creative-school-section-content p",
           opacity: 0,
-          translateY: 20,
+          translateY: 30,
           duration: 0,
         });
 
         anime({
           targets: ".creative-school-section-content img",
           opacity: 0,
-          translateY: 20,
+          translateY: 30,
           duration: 0,
         });
       }
@@ -67,11 +104,11 @@ const CreativeSchoolSection = () => {
     >
       {/* Logo at the top center */}
       <div className="flex justify-center mb-12">
-        <img src={logo} alt="Logo" className="h-16 md:h-24" />
+        <img src={logo} alt="Logo" className="logo h-16 md:h-24" />
       </div>
 
       <div className="container mx-auto text-center px-4 md:px-8">
-        <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
+        <h2 className="text-6xl md:text-7xl sm:text-4xl lg:text-7xl font-bold mb-6">
           WE CREATED
         </h2>
         <h2 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
@@ -107,7 +144,7 @@ const CreativeSchoolSection = () => {
             src="path/to/your/image2.jpg"
             alt="Description of Image 2"
             className="w-full md:w-1/2 lg:w-1/3 object-cover rounded-lg"
-            style={{ maxHeight: "400px" }} // Set max-height for better responsiveness
+            style={{ maxHeight: "400px" }} 
           />
         </div>
       </div>

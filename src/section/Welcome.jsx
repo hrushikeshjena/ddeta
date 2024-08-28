@@ -65,7 +65,7 @@ const WelcomeSection = () => {
       <div className="welcome-content" ref={contentRef}>
         <h3
           ref={titleRef}
-          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-8 md:mb-12 opacity-0"
+          className="text-6xl md:text-7xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white mb-8 md:mb-12 opacity-0"
         >
           Welcome
         </h3>

@@ -123,7 +123,7 @@ const CourseCardSection = () => {
       className="bg-gray-100  py-16 px-4 w-full h-auto lg:h-screen founder-section"
     >
       <div className="container mx-auto text-center">
-        <h2 className="text-4xl md:text-6xl font-bold mb-12 text-[#060273]">
+        <h2 className="text-6xl md:text-7xl font-bold mb-12 text-[#060273]">
           OUR COURSES
         </h2>
         <div className="flex flex-wrap justify-center gap-8">

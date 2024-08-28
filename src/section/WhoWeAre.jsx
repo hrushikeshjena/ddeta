@@ -9,10 +9,10 @@ const WhoAreWe = () => {
       anime({
         targets: ".animate",
         opacity: [0, 1],
-        translateY: [50, 0],
-        duration: 1000,
+        translateY: [30, 0],
+        duration: 1500,
         easing: "easeOutExpo",
-        delay: anime.stagger(100, { start: 100 }),
+        delay: anime.stagger(200, { start: 200 }),
       });
     };
 

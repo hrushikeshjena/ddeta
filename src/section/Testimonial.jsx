@@ -51,9 +51,9 @@ const TestimonialsSection = () => {
       anime({
         targets: ".testimonial",
         opacity: [0, 1],
-        translateY: [50, 0],
+        translateY: [30, 0],
         duration: 1000,
-        easing: "easeOutQuad",
+        easing: "easeOutCubic",
         delay: anime.stagger(100, { start: 100 }),
       });
     };
@@ -67,32 +67,32 @@ const TestimonialsSection = () => {
   return (
     <section className="bg-gray-100 py-12">
       <div className="container mx-auto px-4">
-        <h2 className="text-7xl font-bold text-center mb-4">
+        <h2 className="text-6xl md:text-7xl font-bold text-center mb-4">
           THE <span className="text-[#060273]">HYPE</span>
         </h2>
 
         <h2 className="text-2xl font-bold text-center mb-12">
           Some words from alumni of the Academy
         </h2>
-        <div className="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-lg p-6 flex flex-col items-start relative testimonial"
+              className="bg-white rounded-lg shadow-xl p-6 flex flex-col items-center relative testimonial transform transition-transform duration-300 hover:scale-105"
             >
-              <FaQuoteLeft className="absolute top-4 left-4 text-gray-400 text-3xl sm:text-4xl" />
+              <FaQuoteLeft className="absolute top-4 left-4 text-gray-400 text-4xl" />
               <img
                 src={testimonial.image || "https://via.placeholder.com/150"} // Use placeholder if image not provided
                 alt={testimonial.name}
-                className="w-12 h-12 rounded-full border-2 border-gray-300 absolute top-4 right-4 object-cover"
+                className="w-24 h-24 rounded-full border-4 border-[#060273] object-cover mb-4"
               />
-              <p className="text-gray-700 italic mb-4 text-sm sm:text-base">
+              <p className="text-gray-800 italic mb-4 text-sm sm:text-base text-center">
                 {testimonial.quote}
               </p>
-              <p className="font-semibold text-gray-800 text-sm sm:text-base">
+              <p className="font-semibold text-gray-800 text-sm sm:text-base text-center">
                 {testimonial.name}
               </p>
-              <p className="text-gray-600 text-sm sm:text-base">
+              <p className="text-gray-600 text-sm sm:text-base text-center">
                 {testimonial.position}
               </p>
             </div>
